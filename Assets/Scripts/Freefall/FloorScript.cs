@@ -3,7 +3,7 @@ using System.Collections;
 
 public class FloorScript : MonoBehaviour {
 
-	public bool good;
+	public bool good, randomizePosition;
 
 	private LevelController levelController;
 	private GameObject player1, player2, player3;
@@ -13,6 +13,13 @@ public class FloorScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		if (randomizePosition) {
+			float range = 6.0f;
+			Vector3 pos = transform.position;
+			pos.x = Random.value * (range * 2.0f) - range;
+			transform.position = pos;
+		}
+
 		GameObject levelControllerObj = GameObject.Find("LevelController");
 		if (levelControllerObj != null) {
 			levelController = levelControllerObj.GetComponent<LevelController>();

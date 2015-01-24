@@ -17,17 +17,17 @@ public class LogicScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float windX = (Input.GetKey(KeyCode.RightArrow) ? WIND_STRENGTH : 0.0f) - (Input.GetKey(KeyCode.LeftArrow) ? WIND_STRENGTH : 0.0f);
-		Vector2 wind = new Vector2(windX, 0.0f);
+		float sabateurX = Input.GetAxis("p1_Horizontal_keyboard") * WIND_STRENGTH;
+		Vector2 wind = new Vector2(sabateurX, 0.0f);
 
-		float player1X = (Input.GetKey(KeyCode.D) ? PLAYER_STRENGTH : 0.0f) - (Input.GetKey(KeyCode.A) ? PLAYER_STRENGTH : 0.0f);
+		float player1X = Input.GetAxis("p2_Horizontal_keyboard") * PLAYER_STRENGTH;
 		Vector2 player1Force = new Vector2(player1X, 0.0f);
 
-		//float player2X = (Input.GetKey(KeyCode.D) ? PLAYER_STRENGTH : 0.0f) - (Input.GetKey(KeyCode.A) ? PLAYER_STRENGTH : 0.0f);
-		Vector2 player2Force = new Vector2(0.0f, 0.0f);
+		float player2X = Input.GetAxis("p3_Horizontal_keyboard") * PLAYER_STRENGTH;
+		Vector2 player2Force = new Vector2(player2X, 0.0f);
 
-		//float player3X = (Input.GetKey(KeyCode.D) ? PLAYER_STRENGTH : 0.0f) - (Input.GetKey(KeyCode.A) ? PLAYER_STRENGTH : 0.0f);
-		Vector2 player3Force = new Vector2(0.0f, 0.0f);
+		float player3X = Input.GetAxis("p4_Horizontal_keyboard") * PLAYER_STRENGTH;
+		Vector2 player3Force = new Vector2(player3X, 0.0f);
 
 		player1.rigidbody2D.AddForce(wind + player1Force);
 		player2.rigidbody2D.AddForce(wind + player2Force);
