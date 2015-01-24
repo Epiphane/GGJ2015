@@ -509,10 +509,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5552ecfbdf859449685ec034006169de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: 105
-  down: 107
-  left: 106
-  right: 108
+  player: 2
 --- !u!212 &198980481
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1268,10 +1265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5552ecfbdf859449685ec034006169de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: 273
-  down: 274
-  left: 276
-  right: 275
+  player: 3
 --- !u!212 &772853674
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1695,10 +1689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5552ecfbdf859449685ec034006169de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  up: 119
-  down: 115
-  left: 97
-  right: 100
+  player: 1
 --- !u!50 &1013012141
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -2462,6 +2453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec7c4933aa994e53af7f33a21e8221a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saboteur: 2
   nextLevel: Menu
 --- !u!4 &1358679272
 Transform:
