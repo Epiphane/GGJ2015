@@ -10,8 +10,6 @@ public class TimerScript : MonoBehaviour {
 	Text text;
 	LevelController levelController;
 
-	bool votes[4][4];
-
 	// Use this for initialization
 	void Start () {
 		startTime = Time.time;
