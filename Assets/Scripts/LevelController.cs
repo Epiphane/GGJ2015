@@ -11,6 +11,7 @@ public class LevelController : MonoBehaviour {
 	}
 
 	private State state = State.NONE;
+	public int saboteur = 2;
 
 	public string nextLevel;
 

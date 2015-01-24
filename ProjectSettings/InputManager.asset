@@ -29,9 +29,9 @@ InputManager:
     positiveButton: w
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 3
+    gravity: 1000
     dead: .00100000005
-    sensitivity: 3
+    sensitivity: 1000
     snap: 1
     invert: 0
     type: 0
@@ -217,8 +217,8 @@ InputManager:
     m_Name: p4_Vertical_keyboard
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: '-'
-    positiveButton: '['
+    negativeButton: '['
+    positiveButton: '-'
     altNegativeButton: 
     altPositiveButton: 
     gravity: 10
@@ -235,6 +235,38 @@ InputManager:
     descriptiveNegativeName: 
     negativeButton: 
     positiveButton: 
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 10
+    dead: .00100000005
+    sensitivity: 10
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Submit
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: space
+    altNegativeButton: 
+    altPositiveButton: 
+    gravity: 10
+    dead: .00100000005
+    sensitivity: 10
+    snap: 0
+    invert: 0
+    type: 0
+    axis: 0
+    joyNum: 1
+  - serializedVersion: 3
+    m_Name: Cancel
+    descriptiveName: 
+    descriptiveNegativeName: 
+    negativeButton: 
+    positiveButton: escape
     altNegativeButton: 
     altPositiveButton: 
     gravity: 10

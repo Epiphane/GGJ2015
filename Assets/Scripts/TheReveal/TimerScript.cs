@@ -5,17 +5,20 @@ using System.Collections;
 namespace TheReveal {
 	public class TimerScript : MonoBehaviour {
 		
-		const float TOTAL_TIME = 5.0f;
+		public float TOTAL_TIME = 5.0f;
 		
 		float startTime;
 		Text text;
 		LevelController levelController;
+		public int errorsAllowed = 2;
 		
 		private int[] votes;
+		private bool[] moving;
 		
 		// Use this for initialization
 		void Start () {
-			votes = new int[] { 1, 2, 3, 4 };
+			votes = new int[] { 0, 1, 2, 3 };
+			moving = new bool[] { false, false, false, false };
 
 			startTime = Time.time;
 			text = GetComponent<Text>();
@@ -28,8 +31,10 @@ namespace TheReveal {
 		
 		// Update is called once per frame
 		void Update () {
-			if (Input.GetAxis ("p1_Horizontal_keyboard")) {
-			}
+			UpdatePlayer (0);
+			UpdatePlayer (1);
+			UpdatePlayer (2);
+			UpdatePlayer (3);
 
 			if (levelController != null && levelController.GetState() != LevelController.State.NONE) {
 				return;
@@ -39,10 +44,57 @@ namespace TheReveal {
 			
 			if (text) {
 				text.text = "Time Left: " + remaining.ToString("#0.00");
-			}
+ 			}
 			
 			if (remaining <= 0.0f && levelController != null) {
-				//			levelController.OnLose(3.0f);
+				GameObject option = GameObject.Find("Option" + levelController.saboteur.ToString());
+				TextMesh mesh = option.transform.Find("Player").GetComponent<TextMesh>();
+
+				int errors = 0;
+				for(int i = 0; i < 4; i ++) {
+					if(votes[i] + 1 != levelController.saboteur) {
+						errors ++;
+					}
+				}
+				if(errors > errorsAllowed) {
+					mesh.color = new Color(1, 0, 0);
+					levelController.OnLose(3.0f);
+				}
+				else {
+					mesh.color = new Color(0, 1, 0);
+					levelController.OnWin(3.0f);
+				}
+			}
+		}
+
+		void UpdatePlayer(int player) {
+			float movement = Input.GetAxis ("p" + (player + 1).ToString () + "_Vertical_keyboard");
+			if (Mathf.Abs(movement) <= 0.1) {
+				moving [player] = false;
+			}
+			else if(!moving[player]) {
+				if (movement < 0) {
+					moving [player] = true;
+					votes [player] ++;
+
+					if (votes [player] > 3)
+						votes [player] = 3;
+				} else {
+					moving [player] = true;
+					votes [player] --;
+
+					if (votes [player] < 0)
+						votes [player] = 0;
+				}
+
+				// Move voter
+				GameObject voter = GameObject.Find("Player" + (player + 1).ToString ());
+				GameObject option = GameObject.Find("Option" + (votes[player] + 1).ToString ());
+				if(voter && option) {
+					voter.transform.position = new Vector3(voter.transform.position.x,
+					                                       option.transform.position.y,
+					                                       voter.transform.position.z);
+				}
 			}
 		}
 	}
