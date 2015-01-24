@@ -5,7 +5,6 @@ public class GameController : MonoBehaviour {
 
 	public static GameController instance;
 
-	// Use this for initialization
 	void Awake () {
 		if (instance == null) {
 			DontDestroyOnLoad(this);
@@ -15,7 +14,7 @@ public class GameController : MonoBehaviour {
 		}
 	}
 
-	void LoadLevel(string level) {
+	public void LoadLevel(string level) {
 		Application.LoadLevel(level);
 	}
 }
