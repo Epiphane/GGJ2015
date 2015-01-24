@@ -475,7 +475,7 @@ GameObject:
   - 212: {fileID: 198980481}
   - 114: {fileID: 198980480}
   - 50: {fileID: 198980479}
-  - 232: {fileID: 198980478}
+  - 232: {fileID: 198980483}
   m_Layer: 0
   m_Name: player2
   m_TagString: Untagged
@@ -483,19 +483,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!232 &198980478
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 198980477}
-  m_Enabled: 1
-  m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 1606344279}
-  m_Anchor: {x: -.100000001, y: -.100000001}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: .00499999989
-  m_MaxDistanceOnly: 1
 --- !u!50 &198980479
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -560,6 +547,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1606344277}
   m_RootOrder: 2
+--- !u!232 &198980483
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 198980477}
+  m_Enabled: 1
+  m_CollideConnected: 0
+  m_ConnectedRigidBody: {fileID: 1606344279}
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -.100000039, y: -.100000009}
+  m_Distance: .00499999989
+  m_MaxDistanceOnly: 1
 --- !u!1 &200995312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1234,7 @@ GameObject:
   - 212: {fileID: 772853674}
   - 114: {fileID: 772853673}
   - 50: {fileID: 772853672}
-  - 232: {fileID: 772853671}
+  - 232: {fileID: 772853676}
   m_Layer: 0
   m_Name: player3
   m_TagString: Untagged
@@ -1242,19 +1242,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!232 &772853671
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 772853670}
-  m_Enabled: 0
-  m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 1606344279}
-  m_Anchor: {x: -.100000001, y: .100000001}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: .00499999989
-  m_MaxDistanceOnly: 1
 --- !u!50 &772853672
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1319,6 +1306,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1606344277}
   m_RootOrder: 0
+--- !u!232 &772853676
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 772853670}
+  m_Enabled: 1
+  m_CollideConnected: 0
+  m_ConnectedRigidBody: {fileID: 1606344279}
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: -.100000039, y: .099999994}
+  m_Distance: .00499999989
+  m_MaxDistanceOnly: 1
 --- !u!1 &777273175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,7 +1642,7 @@ GameObject:
   - 212: {fileID: 1013012137}
   - 114: {fileID: 1013012139}
   - 50: {fileID: 1013012141}
-  - 232: {fileID: 1013012140}
+  - 232: {fileID: 1013012142}
   m_Layer: 0
   m_Name: player1
   m_TagString: Untagged
@@ -1699,19 +1699,6 @@ MonoBehaviour:
   down: 115
   left: 97
   right: 100
---- !u!232 &1013012140
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1013012136}
-  m_Enabled: 1
-  m_CollideConnected: 0
-  m_ConnectedRigidBody: {fileID: 1606344279}
-  m_Anchor: {x: .100000001, y: .100000001}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_Distance: .00499999989
-  m_MaxDistanceOnly: 1
 --- !u!50 &1013012141
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1727,6 +1714,19 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!232 &1013012142
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013012136}
+  m_Enabled: 1
+  m_CollideConnected: 0
+  m_ConnectedRigidBody: {fileID: 1606344279}
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: .100000009, y: .099999994}
+  m_Distance: .00499999989
+  m_MaxDistanceOnly: 1
 --- !u!1 &1017635666
 GameObject:
   m_ObjectHideFlags: 0
@@ -2982,7 +2982,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1606344277
 Transform:
@@ -3018,11 +3018,11 @@ Rigidbody2D:
   m_GameObject: {fileID: 1606344275}
   m_Mass: .200000003
   m_LinearDrag: 0
-  m_AngularDrag: .0500000007
+  m_AngularDrag: 28.4500008
   m_GravityScale: 0
   m_FixedAngle: 0
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 2
   m_SleepingMode: 1
   m_CollisionDetection: 0
 --- !u!61 &1606344280
