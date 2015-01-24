@@ -22,21 +22,30 @@ public class PlayerScript : MonoBehaviour {
 //		Vector3 translate = new Vector3(moveHorizontal, moveVertical, 0.0f) * Time.deltaTime * MOVE_SPEED;
 //		transform.Translate(translate);
 
+
+		if (Input.GetKey ("joystick 1 button 0")) {
+			Debug.Log ("joystick 1 button 0");
+		}
+
+		if (Input.GetKey ("joystick 2 button 0")) {
+			Debug.Log ("joystick 2 button 0");
+		}
+
 		if (Input.GetKey (up))
 		{
-			transform.Translate(Vector3.up * Time.deltaTime *4, Space.World);
+			transform.parent.gameObject.rigidbody2D.AddForceAtPosition(Vector3.up * Time.deltaTime * 100, transform.localPosition);
 		}
 		if (Input.GetKey (down))
 		{    
-			transform.Translate(Vector3.down * Time.deltaTime *4, Space.World);
+			transform.parent.gameObject.rigidbody2D.AddForceAtPosition(Vector3.down * Time.deltaTime * 100, transform.localPosition);
 		}  
 		if (Input.GetKey (right))
 		{
-			transform.Translate(Vector3.right* Time.deltaTime *4, Space.World);
+			transform.parent.gameObject.rigidbody2D.AddForceAtPosition(Vector3.right * Time.deltaTime * 100, transform.localPosition);
 		}
 		if (Input.GetKey (left))
 		{    
-			transform.Translate(Vector3.left* Time.deltaTime *4, Space.World);
+			transform.parent.gameObject.rigidbody2D.AddForceAtPosition(Vector3.left * Time.deltaTime * 100, transform.localPosition);
 		}  
 	}
 }
