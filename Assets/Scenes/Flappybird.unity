@@ -692,7 +692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saboteur: 2
-  nextLevel: Freefall
+  nextLevel: Slots
 --- !u!4 &471584960
 Transform:
   m_ObjectHideFlags: 0
