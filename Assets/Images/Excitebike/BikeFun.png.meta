@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: 831648f5f31034cbaad4fd31c763c0bb
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BikeFun_0
+    21300002: BikeFun_1
+    21300004: BikeFun_2
+    21300006: BikeFun_3
+    21300008: BikeFun_4
+    21300010: BikeFun_5
+    21300012: BikeFun_6
+    21300014: BikeFun_7
+    21300016: BikeFun_8
+    21300018: BikeFun_9
+    21300020: BikeFun_10
+    21300022: BikeFun_11
+    21300024: BikeFun_12
+    21300026: BikeFun_13
+    21300028: BikeFun_14
+    21300030: BikeFun_15
+    21300032: BikeFun_16
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 10
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BikeFun_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 329
+        width: 24
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_1
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 372
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 380
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_3
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 354
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_4
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 354
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_5
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 354
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 337
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_7
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 337
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_8
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 337
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_9
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 329
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_10
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 261
+        width: 40
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_11
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 253
+        width: 44
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_12
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 253
+        width: 44
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_13
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 215
+        width: 16
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_14
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 169
+        width: 40
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_15
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 182
+        width: 92
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BikeFun_16
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 4
+        width: 96
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
