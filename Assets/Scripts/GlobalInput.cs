@@ -5,6 +5,7 @@ public class GlobalInput : MonoBehaviour {
 	public static Player P1, P2, P3, P4;
 
 	public GameObject anim1, anim2, anim3, anim4;
+	public string nextScene;
 
 	public static Player[] players {
 		get {
@@ -58,7 +59,7 @@ public class GlobalInput : MonoBehaviour {
 		}
 
 		if (playersAccepted == 4) {
-			Application.LoadLevel ("BoxGame");
+			Application.LoadLevel (nextScene);
 		}
 	}
 }
