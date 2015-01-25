@@ -11,6 +11,8 @@ public class LogicScript : MonoBehaviour {
 	CountdownScript countdownScript;
 	bool started;
 
+	int sab, p1, p2, p3;
+
 	// Use this for initialization
 	void Start () {
 		player1 = GameObject.Find("Player1");
@@ -19,6 +21,11 @@ public class LogicScript : MonoBehaviour {
 		player1.rigidbody2D.gravityScale = player2.rigidbody2D.gravityScale = player3.rigidbody2D.gravityScale = 0;
 		countdownScript = GameObject.Find("Countdown").GetComponent<CountdownScript>();
 		started = false;
+
+		sab = GameController.instance.GetSabateur();
+		p1 = GameController.instance.GetPlayerOne();
+		p2 = GameController.instance.GetPlayerTwo();
+		p3 = GameController.instance.GetPlayerThree();
 	}
 	
 	// Update is called once per frame
@@ -32,16 +39,16 @@ public class LogicScript : MonoBehaviour {
 			return;
 		}
 	
-		float sabateurX = GlobalInput.P1.XAxis() * WIND_STRENGTH;
+		float sabateurX = GlobalInput.players[sab].XAxis() * WIND_STRENGTH;
 		Vector2 wind = new Vector2(sabateurX, 0.0f);
 
-		float player1X = GlobalInput.P2.XAxis() * PLAYER_STRENGTH;
+		float player1X = GlobalInput.players[p1].XAxis() * PLAYER_STRENGTH;
 		Vector2 player1Force = new Vector2(player1X, 0.0f);
 
-		float player2X = GlobalInput.P3.XAxis() * PLAYER_STRENGTH;
+		float player2X = GlobalInput.players[p2].XAxis() * PLAYER_STRENGTH;
 		Vector2 player2Force = new Vector2(player2X, 0.0f);
 
-		float player3X = GlobalInput.P4.XAxis() * PLAYER_STRENGTH;
+		float player3X = GlobalInput.players[p3].XAxis() * PLAYER_STRENGTH;
 		Vector2 player3Force = new Vector2(player3X, 0.0f);
 
 		player1.rigidbody2D.AddForce(wind + player1Force);

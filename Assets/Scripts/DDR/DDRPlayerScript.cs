@@ -30,7 +30,7 @@ namespace DDR {
 			if (GlobalInput.players [player].ABtn ()) {
 				if(!press) {
 					press = true;
-					if(levelController.saboteur == player) {
+					if(GameController.instance.GetSabateur() == player) {
 						logicController.linear = !logicController.linear;
 					}
 					else {

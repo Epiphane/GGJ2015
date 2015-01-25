@@ -19,8 +19,8 @@ namespace Slots {
 				levelController = levelControllerObj.GetComponent<LevelController>();
 			}
 
-			Destroy(GameObject.Find("Options_"+levelController.saboteur));
-			isSpinning[levelController.saboteur - 1] = 1;
+			Destroy(GameObject.Find("Options_"+GameController.instance.GetSabateur()));
+			isSpinning[GameController.instance.GetSabateur() - 1] = 1;
 
 		// Initialize Blockers to invisible
 		for (int i = 1; i<5; i++) {
@@ -41,9 +41,9 @@ namespace Slots {
 			// Check to see if players have hit their button
 			for (int i=1; i<5; i++) {
 				// Look for SA
-				if (GlobalInput.players[levelController.saboteur].ABtn()) {
-					int blocked_player = levelController.saboteur;
-					while(blocked_player == levelController.saboteur) {
+				if (GlobalInput.players[GameController.instance.GetSabateur()].ABtn()) {
+					int blocked_player = GameController.instance.GetSabateur();
+					while(blocked_player == GameController.instance.GetSabateur()) {
 						blocked_player = (int)Random.Range(1,5);
 					}
 

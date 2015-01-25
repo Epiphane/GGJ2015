@@ -76,7 +76,7 @@ namespace ExciteBike {
 		}
 		
 		void OnCollisionEnter2D(Collision2D col) {
-			if (player == levelController.saboteur)
+			if (player == GameController.instance.GetSabateur())
 				return;
 
 			if (col.gameObject.tag == "bad") {

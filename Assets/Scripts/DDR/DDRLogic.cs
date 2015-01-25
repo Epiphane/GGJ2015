@@ -37,7 +37,7 @@ namespace DDR {
 				levelController = levelControllerObj.GetComponent<LevelController>();
 			}
 
-			GameObject playerObj = GameObject.Find ("Player" + levelController.saboteur);
+			GameObject playerObj = GameObject.Find ("Player" + GameController.instance.GetSabateur());
 			Instantiate(instructions, new Vector3(-3, playerObj.transform.position.y + 0.6f, 1), playerObj.transform.rotation);
 		}
 		
@@ -46,7 +46,7 @@ namespace DDR {
 			// Create notes!
 			if (Time.time - timeLeft >= secPerBeat) {
 				for(int i = 0; i < 4; i ++) {
-					if(i + 1 == levelController.saboteur)
+					if(i + 1 == GameController.instance.GetSabateur())
 						continue;
 
 					if(Random.Range(0, 2) >= 1 && errors [i] <= max_errors) { 

@@ -13,8 +13,6 @@ public class LevelController : MonoBehaviour {
 	private State state = State.NONE;
 	private Animator leftEndAnim, rightEndAnim;
 
-	public int saboteur = 2;
-
 	public string nextLevel;
 
 	// Use this for initialization
@@ -22,6 +20,8 @@ public class LevelController : MonoBehaviour {
 		state = State.NONE;
 		leftEndAnim = GameObject.Find("LeftEnd").GetComponent<Animator>();
 		rightEndAnim = GameObject.Find("RightEnd").GetComponent<Animator>();
+
+		GameController.instance.PickSabateur();
 	}
 
 	public State GetState() {
