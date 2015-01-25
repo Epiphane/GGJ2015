@@ -4,10 +4,14 @@ using System.Collections;
 public class FlappyScript : MonoBehaviour {
 	
 	bool alive;
+	bool hover;
+	public float gravityScale;
 
 	// Use this for initialization
 	void Start () {
 		alive = true;
+		rigidbody2D.gravityScale = 0;
+		hover = true;
 	}
 
 	public int playerNum;
@@ -19,6 +23,11 @@ public class FlappyScript : MonoBehaviour {
 		}
 
 		if (GlobalInput.players[playerNum].ABtn()) {
+			if (hover) {
+				hover = false;
+				rigidbody2D.gravityScale = gravityScale;
+			}
+
 			Vector2 vel = rigidbody2D.velocity;
 			vel.y = 0;
 			rigidbody2D.velocity = vel;
@@ -30,6 +39,8 @@ public class FlappyScript : MonoBehaviour {
 
 	public void OnHitPipe() {
 		alive = false;
+	
+		rigidbody2D.gravityScale = gravityScale;
 
 		GameObject leftInvis = GameObject.Find("Left Invisible Wall");
 		GameObject rightInvis = GameObject.Find("Right Invisible Wall");
