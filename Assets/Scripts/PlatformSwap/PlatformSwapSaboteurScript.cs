@@ -10,7 +10,7 @@ public class PlatformSwapSaboteurScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GlobalInput.players[1].ABtn()) {
+		if (GlobalInput.players[4].ABtn()) {
 			GameObject[] objects = GameObject.FindGameObjectsWithTag("swapPlatform");
 			for (int i = 0; i < objects.Length; ++i) {
 				objects[i].GetComponent<PlatformSwapPlatformScript>().swap();
