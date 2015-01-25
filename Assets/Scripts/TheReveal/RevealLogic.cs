@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using System.Collections;
 
 namespace TheReveal {
-	public class TimerScript : MonoBehaviour {
+	public class RevealLogic : MonoBehaviour {
 		
 		public float TOTAL_TIME = 5.0f;
 		
@@ -68,7 +68,7 @@ namespace TheReveal {
 		}
 
 		void UpdatePlayer(int player) {
-			float movement = Input.GetAxis ("p" + (player + 1).ToString () + "_Vertical_keyboard");
+			float movement = GlobalInput.players[player + 1].YAxis();
 			if (Mathf.Abs(movement) <= 0.1) {
 				moving [player] = false;
 			}
