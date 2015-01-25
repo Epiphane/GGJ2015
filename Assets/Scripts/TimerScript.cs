@@ -4,7 +4,8 @@ using System.Collections;
 
 public class TimerScript : MonoBehaviour {
 
-	const float TOTAL_TIME = 5.0f;
+	public float levelTime;
+	public bool winOnTimeout;
 
 	float startTime;
 	Text text;
@@ -27,14 +28,18 @@ public class TimerScript : MonoBehaviour {
 			return;
 		}
 
-		float remaining = Mathf.Max(TOTAL_TIME - (Time.time - startTime), 0.0f);
+		float remaining = Mathf.Max(levelTime - (Time.time - startTime), 0.0f);
 
 		if (text) {
 			text.text = "Time Left: " + remaining.ToString("#0.00");
 		}
 
 		if (remaining <= 0.0f && levelController != null) {
-			levelController.OnLose(3.0f);
+			if (winOnTimeout) {
+				levelController.OnWin(3.0f);
+			} else {
+				levelController.OnLose(3.0f);
+			}
 		}
 	}
 }
