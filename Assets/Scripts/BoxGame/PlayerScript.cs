@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using XInputDotNetPure;
+//using XInputDotNetPure;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -8,7 +8,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GamePad.SetVibration(0, 1, 1);
+		//GamePad.SetVibration(0, 1, 1);
 	}
 
 	public int player;

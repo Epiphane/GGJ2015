@@ -44,7 +44,7 @@ public class GlobalInput : MonoBehaviour {
 		}
 
 		if (playersAccepted == 4) {
-			Application.LoadLevel ("BoxGame");
+			Application.LoadLevel ("Flappybird");
 		}
 	}
 }
@@ -64,19 +64,19 @@ public class Player {
 	}
 
 	public bool ABtn() {
-		return Input.GetKey ("joystick " + num + " button 0");
+		return Input.GetKeyDown ("joystick " + num + " button 0");
 	}
 
 	
 	public bool BBtn() {
-		return Input.GetKey ("joystick " + num + " button 1");
+		return Input.GetKeyDown ("joystick " + num + " button 1");
 	}
 	
 	public bool YBtn() {
-		return Input.GetKey ("joystick " + num + " button 2");
+		return Input.GetKeyDown ("joystick " + num + " button 2");
 	}
 
 	public bool XBtn() {
-		return Input.GetKey ("joystick " + num + " button 3");
+		return Input.GetKeyDown ("joystick " + num + " button 3");
 	}
 }

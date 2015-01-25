@@ -993,6 +993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41c2122cb2e0478684b71ef80034025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 3
 --- !u!95 &1540358855
 Animator:
   serializedVersion: 3
@@ -1296,6 +1297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41c2122cb2e0478684b71ef80034025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 1
 --- !u!1 &1770663185
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41c2122cb2e0478684b71ef80034025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 2
 --- !u!95 &1829612044
 Animator:
   serializedVersion: 3
@@ -1533,6 +1536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41c2122cb2e0478684b71ef80034025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerNum: 4
 --- !u!95 &1953466320
 Animator:
   serializedVersion: 3
