@@ -25,3 +25,5 @@ EditorBuildSettings:
     path: Assets/Scenes/InputPicker.unity
   - enabled: 1
     path: Assets/Scenes/Sluts.unity
+  - enabled: 1
+    path: Assets/Scenes/PlatformSwap.unity
