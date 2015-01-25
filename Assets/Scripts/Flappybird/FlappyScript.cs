@@ -4,30 +4,25 @@ using System.Collections;
 public class FlappyScript : MonoBehaviour {
 	
 	bool alive;
-	bool hover;
+	bool frozen;
 	public float gravityScale;
 
 	// Use this for initialization
 	void Start () {
 		alive = true;
 		rigidbody2D.gravityScale = 0;
-		hover = true;
+		frozen = true;
 	}
 
 	public int playerNum;
 
 	// Update is called once per frame
 	void Update () {
-		if (!alive) {
+		if (!alive || frozen) {
 			return;
 		}
 
 		if (GlobalInput.players[playerNum].ABtn()) {
-			if (hover) {
-				hover = false;
-				rigidbody2D.gravityScale = gravityScale;
-			}
-
 			Vector2 vel = rigidbody2D.velocity;
 			vel.y = 0;
 			rigidbody2D.velocity = vel;
@@ -50,5 +45,10 @@ public class FlappyScript : MonoBehaviour {
 
 	public bool IsAlive() {
 		return alive;
+	}
+
+	public void Unfreeze() {
+		frozen = false;
+		rigidbody2D.gravityScale = gravityScale;
 	}
 }
