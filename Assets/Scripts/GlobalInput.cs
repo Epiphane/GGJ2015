@@ -15,6 +15,20 @@ public class GlobalInput : MonoBehaviour {
 	private int playersAccepted = 0;
 
 	void Update() {
+		if (Input.GetKey ("space")) {
+			// No controllers? no problem!
+			P1 = new KeyboardPlayer(KeyCode.Q, KeyCode.Z, KeyCode.Alpha1, KeyCode.Alpha3);
+			P2 = new KeyboardPlayer(KeyCode.U, KeyCode.O, KeyCode.Alpha7, KeyCode.Alpha9);
+			P3 = new KeyboardPlayer(KeyCode.RightShift, KeyCode.Return, KeyCode.Keypad1, KeyCode.Backslash);
+			P4 = new KeyboardPlayer(KeyCode.Keypad4, KeyCode.Keypad6, KeyCode.Keypad7, KeyCode.Keypad8);
+
+			P1.num = "1";
+			P2.num = "2";
+			P3.num = "3";
+			P4.num = "4";
+			playersAccepted = 4;
+		}
+
 		if (Input.GetKeyDown("joystick 1 button 0")) {
 			anim1.GetComponent<Animator>().SetTrigger("P1Entered");
 			P1 = new Player();
@@ -55,28 +69,46 @@ public class Player {
 
 	public string num;
 
-	public float XAxis() {
+	public virtual float XAxis() {
 		return Input.GetAxis("Horizontal" + num);
 	}
 	
-	public float YAxis() {
+	public virtual float YAxis() {
 		return Input.GetAxis("Vertical" + num);
 	}
 
-	public bool ABtn() {
+	public virtual bool ABtn() {
 		return Input.GetKeyDown ("joystick " + num + " button 0");
 	}
 
 	
-	public bool BBtn() {
+	public virtual bool BBtn() {
 		return Input.GetKeyDown ("joystick " + num + " button 1");
 	}
 	
-	public bool YBtn() {
+	public virtual bool YBtn() {
 		return Input.GetKeyDown ("joystick " + num + " button 2");
 	}
 
-	public bool XBtn() {
+	public virtual bool XBtn() {
 		return Input.GetKeyDown ("joystick " + num + " button 3");
 	}
+}
+
+public class KeyboardPlayer: Player {
+	KeyCode a, b, c, d;
+	public KeyboardPlayer(KeyCode a, KeyCode b, KeyCode c, KeyCode d) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+	}
+
+	public float XAxis() { return Input.GetAxis("KHor" + num); }
+	public float YAxis() { return Input.GetAxis("KVer" + num); }
+
+	public override bool ABtn() { base.ABtn (); return Input.GetKey (a); }
+	public override bool BBtn() { return Input.GetKeyDown (b); }
+	public override bool YBtn() { return Input.GetKeyDown (c); }
+	public override bool XBtn() { return Input.GetKeyDown (d); }
 }
