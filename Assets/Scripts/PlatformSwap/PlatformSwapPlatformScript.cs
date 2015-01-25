@@ -3,28 +3,25 @@ using System.Collections;
 
 public class PlatformSwapPlatformScript : MonoBehaviour {
 
-	private bool enabled;
+	public bool platformEnabled;
 	private SpriteRenderer spriteRenderer;
 
 	// Use this for initialization
 	void Start () {
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		enabled = Random.value > 0.5f;
-		swap();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		updateState();
 	}
 
 	public void swap() {
-		enabled = !enabled;
+		platformEnabled = !platformEnabled;
+		updateState();
+	}
 
+	private void updateState() {
 		Color color = spriteRenderer.color;
-		color.a = enabled ? 1.0f : 0.5f;
+		color.a = platformEnabled ? 1.0f : 0.5f;
 		spriteRenderer.color = color;
-
-		collider2D.isTrigger = !enabled;
+		
+		collider2D.isTrigger = !platformEnabled;
 	}
 }
