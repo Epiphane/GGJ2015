@@ -11,6 +11,8 @@ public class LevelController : MonoBehaviour {
 	}
 
 	private State state = State.NONE;
+	private Animator leftEndAnim, rightEndAnim;
+
 	public int saboteur = 2;
 
 	public string nextLevel;
@@ -18,6 +20,8 @@ public class LevelController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		state = State.NONE;
+		leftEndAnim = GameObject.Find("LeftEnd").GetComponent<Animator>();
+		rightEndAnim = GameObject.Find("RightEnd").GetComponent<Animator>();
 	}
 
 	public State GetState() {
@@ -30,6 +34,7 @@ public class LevelController : MonoBehaviour {
 		}
 		state = State.WIN;
 
+		EndAnim();
 		ShowText("Good Job!", new Color(0.1f, 0.9f, 0.5f));
 
 		GameController.instance.LoadLevel(nextLevel, delay);
@@ -41,11 +46,17 @@ public class LevelController : MonoBehaviour {
 		}
 		state = State.WIN;
 
+		EndAnim();
 		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
 
 		GameController.instance.ResetGame(delay);
 	}
 
+	void EndAnim() {
+		leftEndAnim.SetTrigger("endgame");
+		rightEndAnim.SetTrigger("endgame");
+	}
+	
 	void ShowText(string message, Color color) {
 		GameObject canvas = GameObject.Find("Canvas");
 		if (canvas == null) {
@@ -56,7 +67,7 @@ public class LevelController : MonoBehaviour {
 		textObject.transform.SetParent(canvas.transform);
 
 		Text text = textObject.AddComponent("Text") as Text;
-		text.transform.localPosition = new Vector3(0.0f, 0.0f, 0.0f);
+		text.transform.localPosition = new Vector3(0.0f, -150.0f, 0.0f);
 
 		text.font = Resources.GetBuiltinResource(typeof(Font), "Arial.ttf") as Font;
 		text.fontSize = 72;
