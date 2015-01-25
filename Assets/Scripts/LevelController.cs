@@ -37,7 +37,17 @@ public class LevelController : MonoBehaviour {
 		EndAnim();
 		ShowText("Good Job!", new Color(0.1f, 0.9f, 0.5f));
 
+
+		for (int i = 1; i < 5; i++) {
+			if (i == saboteur) {
+				continue;
+			}
+
+			ScoreScript.instance.AddScore(i, 10);
+		}
+		
 		GameController.instance.LoadLevel(nextLevel, delay);
+		//ScoreScript.instance.DoLevel(nextLevel, delay);	
 	}
 
 	public void OnLose(float delay) {
@@ -48,10 +58,11 @@ public class LevelController : MonoBehaviour {
 
 		EndAnim();
 		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
-
-		//GameController.instance.ResetGame(delay);
+		
 		GameController.instance.LoadLevel(nextLevel, delay);
-	}
+		//ScoreScript.instance.AddScore(saboteur, 15);
+		//ScoreScript.instance.DoLevel(nextLevel, delay);
+	}	
 
 	void EndAnim() {
 		leftEndAnim.SetTrigger("endgame");

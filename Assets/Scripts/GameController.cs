@@ -13,6 +13,15 @@ public class GameController : MonoBehaviour {
 		if (instance == null) {
 			DontDestroyOnLoad(this);
 			instance = this;
+			if (ScoreScript.instance == null) {
+				ScoreScript.instance = new ScoreScript();
+				DontDestroyOnLoad(ScoreScript.instance);
+
+				ScoreScript.instance.p1score = 0;
+				ScoreScript.instance.p2score = 0;
+				ScoreScript.instance.p3score = 0;
+				ScoreScript.instance.p4score = 0;
+			}
 		} else if (instance != this) {
 			Destroy(gameObject);
 		}
