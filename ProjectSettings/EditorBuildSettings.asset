@@ -6,22 +6,28 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Stealth.unity
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-  - enabled: 1
-    path: Assets/Scenes/TheReveal.unity
+    path: Assets/Scenes/InputPicker.unity
   - enabled: 1
     path: Assets/Scenes/BoxGame.unity
-  - enabled: 1
-    path: Assets/Scenes/Flappybird.unity
   - enabled: 1
     path: Assets/Scenes/DDR.unity
   - enabled: 1
     path: Assets/Scenes/Excitebike.unity
   - enabled: 1
+    path: Assets/Scenes/Flappybird.unity
+  - enabled: 1
     path: Assets/Scenes/Freefall.unity
   - enabled: 1
     path: Assets/Scenes/InputPicker.unity
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+  - enabled: 1
+    path: Assets/Scenes/PlatformSwap.unity
+  - enabled: 1
+    path: Assets/Scenes/Slots.unity
+  - enabled: 1
     path: Assets/Scenes/Sluts.unity
+  - enabled: 1
+    path: Assets/Scenes/Stealth.unity
+  - enabled: 1
+    path: Assets/Scenes/TheReveal.unity

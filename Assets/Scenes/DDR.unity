@@ -74,30 +74,30 @@ NavMeshSettings:
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
   m_NavMesh: {fileID: 0}
---- !u!1 &102041735
+--- !u!1 &141631454
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 4
   m_Component:
-  - 224: {fileID: 102041736}
-  - 222: {fileID: 102041738}
-  - 114: {fileID: 102041737}
-  - 114: {fileID: 102041739}
+  - 224: {fileID: 141631455}
+  - 222: {fileID: 141631458}
+  - 114: {fileID: 141631457}
+  - 114: {fileID: 141631456}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Countdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &102041736
+--- !u!224 &141631455
 RectTransform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102041735}
+  m_GameObject: {fileID: 141631454}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -106,54 +106,53 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -240, y: -225}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
---- !u!114 &102041737
+--- !u!114 &141631456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102041735}
+  m_GameObject: {fileID: 141631454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 881f3b89c76f041948d12a459925f4c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timePerNumber: .439999998
+--- !u!114 &141631457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141631454}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 300
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
---- !u!222 &102041738
+  m_Text: 3
+--- !u!222 &141631458
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102041735}
---- !u!114 &102041739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 102041735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5d6df236c3fb42028206a26c298452e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelTime: 15
-  winOnTimeout: 1
+  m_GameObject: {fileID: 141631454}
 --- !u!1 &164058903
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,8 +316,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 4
-  soundEffect: {fileID: 694500083}
 --- !u!82 &694500083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -437,7 +434,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.25401306
+  orthographic size: 4.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -543,7 +540,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 102041736}
+  - {fileID: 141631455}
+  - {fileID: 1772421001}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_AnchorMin: {x: 0, y: 0}
@@ -614,8 +612,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 3
-  soundEffect: {fileID: 1066441581}
 --- !u!82 &1066441581
 AudioSource:
   m_ObjectHideFlags: 0
@@ -866,6 +862,86 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &1772421000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1772421001}
+  - 222: {fileID: 1772421004}
+  - 114: {fileID: 1772421003}
+  - 114: {fileID: 1772421002}
+  m_Layer: 5
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1772421001
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772421000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 893495526}
+  m_RootOrder: 1
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: -392, y: 294}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1772421002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772421000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5d6df236c3fb42028206a26c298452e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelTime: 20
+  winOnTimeout: 1
+--- !u!114 &1772421003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772421000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: 'Time Left:'
+--- !u!222 &1772421004
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1772421000}
 --- !u!1 &1855667434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,8 +1091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 1
-  soundEffect: {fileID: 1919720231}
 --- !u!82 &1919720231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1179,8 +1253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: 2
-  soundEffect: {fileID: 2138977843}
 --- !u!82 &2138977843
 AudioSource:
   m_ObjectHideFlags: 0

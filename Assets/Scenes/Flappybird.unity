@@ -272,7 +272,7 @@ AudioSource:
   m_GameObject: {fileID: 265659321}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 90e25bb9bf22848b189928fe2d34d260, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 77f5f42f5f9664f1faffd82d368cba32, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -625,9 +625,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 684496882}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82ff6a0fa5a56419a9e6f4779426d25c, type: 3}
+  m_Script: {fileID: 11500000, guid: 881f3b89c76f041948d12a459925f4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timePerNumber: .75
 --- !u!114 &684496884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1153,7 +1154,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -270, y: 183}
+  m_AnchoredPosition: {x: -392, y: 266}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1529658296
@@ -1167,7 +1168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d6df236c3fb42028206a26c298452e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelTime: 20
+  levelTime: 22
   winOnTimeout: 1
 --- !u!114 &1529658297
 MonoBehaviour:
@@ -1181,7 +1182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: .980527461, b: .29411763, a: 1}
+  m_Color: {r: .196078435, g: .196078435, b: .196078435, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 24

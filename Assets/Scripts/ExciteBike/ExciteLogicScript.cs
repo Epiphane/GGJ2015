@@ -3,17 +3,11 @@ using System.Collections;
 
 public class ExciteLogicScript : MonoBehaviour {
 
-//	private const float PIPE_Y_RANGE = 3.0f;
-//	
-//	public float interval;
-//
-//	private FlappyScript bird1Script, bird2Script, bird3Script;
-//	private int score;
-//	private bool reported;
-//	private float lastCreate;
+//	public float time_bwe
 
 	// Use this for initialization
 	void Start () {
+		GlobalInput.MehKeyboard ();
 //		bird1Script = GameObject.Find("Flappybird1").GetComponent<FlappyScript>();
 //		bird2Script = GameObject.Find("Flappybird2").GetComponent<FlappyScript>();
 //		bird3Script = GameObject.Find("Flappybird3").GetComponent<FlappyScript>();

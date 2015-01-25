@@ -65,6 +65,18 @@ public class GlobalInput : MonoBehaviour {
 		P3 = new Player("3");
 		P4 = new Player("4");
 	}
+	
+	public static void MehKeyboard() {
+		P1 = new KeyboardPlayer(KeyCode.Q, KeyCode.Z, KeyCode.Alpha1, KeyCode.Alpha3);
+		P2 = new KeyboardPlayer(KeyCode.U, KeyCode.O, KeyCode.Alpha7, KeyCode.Alpha9);
+		P3 = new KeyboardPlayer(KeyCode.RightShift, KeyCode.Return, KeyCode.Keypad1, KeyCode.Backslash);
+		P4 = new KeyboardPlayer(KeyCode.Keypad4, KeyCode.Keypad6, KeyCode.Keypad7, KeyCode.Keypad8);
+		
+		P1.num = "1";
+		P2.num = "2";
+		P3.num = "3";
+		P4.num = "4";
+	}
 }
 
 public class Player {
