@@ -49,7 +49,8 @@ public class LevelController : MonoBehaviour {
 		EndAnim();
 		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
 
-		GameController.instance.ResetGame(delay);
+		//GameController.instance.ResetGame(delay);
+		GameController.instance.LoadLevel(nextLevel, delay);
 	}
 
 	void EndAnim() {

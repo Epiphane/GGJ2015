@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saboteur: 2
-  nextLevel: Menu
+  nextLevel: Freefall
 --- !u!4 &471584960
 Transform:
   m_ObjectHideFlags: 0

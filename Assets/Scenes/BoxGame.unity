@@ -2953,7 +2953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saboteur: 2
-  nextLevel: Menu
+  nextLevel: PlatformSwap
 --- !u!4 &1358679272
 Transform:
   m_ObjectHideFlags: 0

@@ -1489,7 +1489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saboteur: 4
-  nextLevel: Menu
+  nextLevel: BoxGame
 --- !u!4 &2104512549
 Transform:
   m_ObjectHideFlags: 0
