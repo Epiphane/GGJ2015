@@ -32,35 +32,38 @@ public class GlobalInput : MonoBehaviour {
 
 		if (Input.GetKeyDown("joystick 1 button 0")) {
 			anim1.GetComponent<Animator>().SetTrigger("P1Entered");
-			P1 = new Player();
-			P1.num = "1";
+			P1 = new Player("1");
 			playersAccepted++;
 		}
 
 		if (Input.GetKeyDown("joystick 2 button 0")) {
 			anim2.GetComponent<Animator>().SetTrigger("P2Entered");
-			P2 = new Player();
-			P2.num = "2";
+			P2 = new Player("2");
 			playersAccepted++;
 		}
 
 		if (Input.GetKeyDown("joystick 3 button 0")) {
 			anim3.GetComponent<Animator>().SetTrigger("P3Entered");
-			P3 = new Player();
-			P3.num = "3";
+			P3 = new Player("3");
 			playersAccepted++;
 		}
 
 		if (Input.GetKeyDown("joystick 4 button 0")) {
 			anim4.GetComponent<Animator>().SetTrigger("P4Entered");
-			P4 = new Player();
-			P4.num = "4";
+			P4 = new Player("4");
 			playersAccepted++;
 		}
 
 		if (P1 != null && P2 != null && P3 != null && P4 != null) {
 			Application.LoadLevel (nextScene);
 		}
+	}
+
+	public static void Meh() {
+		P1 = new Player("1");
+		P2 = new Player("2");
+		P3 = new Player("3");
+		P4 = new Player("4");
 	}
 }
 
@@ -69,6 +72,14 @@ public class Player {
 	public float yDirection;
 
 	public string num;
+
+	public Player(string num) {
+		this.num = num;
+	}
+
+	public Player() {
+		// hi mom
+	}
 
 	public virtual float XAxis() {
 		return Input.GetAxis("Horizontal" + num);
