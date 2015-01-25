@@ -45,8 +45,7 @@ public class LevelController : MonoBehaviour {
 			ScoreScript.instance.AddScore(i, 10);
 		}
 
-		Application.LoadLevel ("Score");
-		GameController.instance.LoadLevel(nextLevel, delay + 5);
+		ScoreScript.instance.DoLevel(nextLevel, delay);
 	}
 
 	public void OnLose(float delay) {
@@ -59,7 +58,7 @@ public class LevelController : MonoBehaviour {
 		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
 
 		//GameController.instance.ResetGame(delay);
-		GameController.instance.LoadLevel(nextLevel, delay);
+		ScoreScript.instance.DoLevel(nextLevel, delay);
 	}
 
 	void EndAnim() {
