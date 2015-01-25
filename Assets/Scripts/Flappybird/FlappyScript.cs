@@ -11,14 +11,16 @@ public class FlappyScript : MonoBehaviour {
 		flapHeld = false;
 		alive = true;
 	}
-	
+
+	public int playerNum;
+
 	// Update is called once per frame
 	void Update () {
 		if (!alive) {
 			return;
 		}
 
-		if (Input.GetKey(KeyCode.Space) && !flapHeld) {
+		if (GlobalInput.players[playerNum].ABtn()) {
 			flapHeld = true;
 			Vector2 vel = rigidbody2D.velocity;
 			vel.y = 0;
@@ -26,7 +28,7 @@ public class FlappyScript : MonoBehaviour {
 			rigidbody2D.AddForce(Vector2.up * 300.0f);
 		}
 
-		flapHeld = Input.GetKey(KeyCode.Space);
+		flapHeld = GlobalInput.players[playerNum].ABtn();
 	}
 
 	public void OnHitPipe() {
