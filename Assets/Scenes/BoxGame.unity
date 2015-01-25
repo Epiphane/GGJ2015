@@ -2462,6 +2462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec7c4933aa994e53af7f33a21e8221a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saboteur: 2
   nextLevel: Menu
 --- !u!4 &1358679272
 Transform:

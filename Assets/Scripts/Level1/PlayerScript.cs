@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using XInputDotNetPure;
 
 public class PlayerScript : MonoBehaviour {
 
@@ -7,7 +8,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		GamePad.SetVibration(0, 1, 1);
 	}
 
 	public KeyCode up;
@@ -22,15 +23,7 @@ public class PlayerScript : MonoBehaviour {
 //		Vector3 translate = new Vector3(moveHorizontal, moveVertical, 0.0f) * Time.deltaTime * MOVE_SPEED;
 //		transform.Translate(translate);
 
-
-		if (Input.GetKey ("joystick 1 button 0")) {
-			Debug.Log ("joystick 1 button 0");
-		}
-
-		if (Input.GetKey ("joystick 2 button 0")) {
-			Debug.Log ("joystick 2 button 0");
-		}
-
+		Debug.Log ("horiz1:" + Input.GetAxis("Horizontal1") + "horiz2: " + Input.GetAxis("Horizontal2"));
 		if (Input.GetKey (up))
 		{
 			transform.parent.gameObject.rigidbody2D.AddForceAtPosition(Vector3.up * Time.deltaTime * 100, transform.localPosition);
