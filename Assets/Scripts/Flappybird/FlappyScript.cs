@@ -41,10 +41,14 @@ public class FlappyScript : MonoBehaviour {
 		}
 
 		if (frozen) {
-			if (countdownScript.Done ()) {
+			if (countdownScript.Done()) {
 				frozen = false;
 				rigidbody2D.gravityScale = gravityScale;
 			}
+		}
+
+		if (frozen) {
+			return;
 		}
 
 		if (GlobalInput.players[playerIndex].ABtn()) {
