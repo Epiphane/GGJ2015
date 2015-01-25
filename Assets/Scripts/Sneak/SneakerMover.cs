@@ -21,4 +21,10 @@ public class SneakerMover : MonoBehaviour {
 
 		con.Move (moveDir * Time.fixedDeltaTime);
 	}
+
+	void OnControllerColliderHit(ControllerColliderHit lol) {
+		if (lol.gameObject.tag == "Finish") {
+			lol.gameObject.GetComponent<SpringJoint>().connectedBody = GetComponent<Rigidbody>();
+		}
+	}
 }
