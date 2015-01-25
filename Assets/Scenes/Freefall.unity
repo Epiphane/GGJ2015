@@ -168,6 +168,7 @@ GameObject:
   - 4: {fileID: 914504966}
   - 212: {fileID: 914504965}
   - 61: {fileID: 914504964}
+  - 114: {fileID: 914504967}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -220,6 +221,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!114 &914504967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 914504963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12e314c84187434a9db4c11fe156b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  good: 1
+  randomizePosition: 1
 --- !u!1 &1203954833
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +322,7 @@ GameObject:
   - 4: {fileID: 1263000536}
   - 212: {fileID: 1263000535}
   - 61: {fileID: 1263000534}
+  - 114: {fileID: 1263000537}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -360,6 +375,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!114 &1263000537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263000533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b12e314c84187434a9db4c11fe156b72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  good: 0
+  randomizePosition: 0
 --- !u!1 &1333072047
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,6 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec7c4933aa994e53af7f33a21e8221a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saboteur: 2
   nextLevel: Menu
 --- !u!4 &2104512549
 Transform:
