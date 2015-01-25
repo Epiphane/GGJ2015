@@ -6,6 +6,10 @@ TextureImporter:
     21300002: Options_1
     21300004: Options_2
     21300006: Options_3
+    21300008: Options_4
+    21300010: Options_5
+    21300012: Options_6
+    21300014: Options_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -70,8 +74,8 @@ TextureImporter:
     - name: Options_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 1206
+        y: 603
         width: 603
         height: 603
       alignment: 0
@@ -80,7 +84,47 @@ TextureImporter:
     - name: Options_3
       rect:
         serializedVersion: 2
+        x: 1809
+        y: 603
+        width: 603
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Options_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 603
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Options_5
+      rect:
+        serializedVersion: 2
         x: 603
+        y: 0
+        width: 603
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Options_6
+      rect:
+        serializedVersion: 2
+        x: 1206
+        y: 0
+        width: 603
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Options_7
+      rect:
+        serializedVersion: 2
+        x: 1809
         y: 0
         width: 603
         height: 603
