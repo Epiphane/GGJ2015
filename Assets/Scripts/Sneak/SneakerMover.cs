@@ -9,13 +9,22 @@ public class SneakerMover : MonoBehaviour {
 	}
 
 	public int player;
-	private const float MOVE_SPEED = 5;
+	private const float MOVE_SPEED = 1.8f;
 
+	private Vector3 moveDir = Vector3.zero;
 	// Update is called once per frame
 	void Update () {
-		float moveHorizontal =  GlobalInput.players[player].XAxis();
-		float moveVertical =   -GlobalInput.players[player].YAxis();
-		Vector3 translate = new Vector3(moveHorizontal, moveVertical, 0.0f) * Time.deltaTime * MOVE_SPEED;
-		transform.Translate(translate);
+		CharacterController con = GetComponent<CharacterController>();
+		moveDir = new Vector3(GlobalInput.players[player].XAxis(), GlobalInput.players[player].YAxis(), .11f);
+		moveDir = transform.TransformDirection(moveDir);
+		moveDir *= MOVE_SPEED;
+
+		con.Move (moveDir * Time.fixedDeltaTime);
+	}
+
+	void OnControllerColliderHit(ControllerColliderHit lol) {
+		if (lol.gameObject.tag == "Finish") {
+			lol.gameObject.GetComponent<SpringJoint>().connectedBody = GetComponent<Rigidbody>();
+		}
 	}
 }
