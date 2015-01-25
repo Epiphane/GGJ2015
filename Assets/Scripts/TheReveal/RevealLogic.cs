@@ -47,12 +47,12 @@ namespace TheReveal {
  			}
 			
 			if (remaining <= 0.0f && levelController != null) {
-				GameObject option = GameObject.Find("Option" + levelController.saboteur.ToString());
+				GameObject option = GameObject.Find("Option" + GameController.instance.GetSabateur().ToString());
 				TextMesh mesh = option.transform.Find("Player").GetComponent<TextMesh>();
 
 				int errors = 0;
 				for(int i = 0; i < 4; i ++) {
-					if(votes[i] + 1 != levelController.saboteur) {
+					if(votes[i] + 1 != GameController.instance.GetSabateur()) {
 						errors ++;
 					}
 				}

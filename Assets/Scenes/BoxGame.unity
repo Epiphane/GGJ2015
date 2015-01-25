@@ -634,12 +634,12 @@ DistanceJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 198980477}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 1606344279}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -.100000039, y: -.100000009}
-  m_Distance: .00499999989
+  m_Distance: .0500000007
   m_MaxDistanceOnly: 1
 --- !u!1 &200995312
 GameObject:
@@ -834,12 +834,12 @@ DistanceJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 319271277}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 1606344279}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: .100000009, y: -.100000009}
-  m_Distance: .00499999989
+  m_Distance: .0500000007
   m_MaxDistanceOnly: 1
 --- !u!50 &319271280
 Rigidbody2D:
@@ -1732,12 +1732,12 @@ DistanceJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 772853670}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 1606344279}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: -.100000039, y: .099999994}
-  m_Distance: .00499999989
+  m_Distance: .0500000007
   m_MaxDistanceOnly: 1
 --- !u!1 &777273175
 GameObject:
@@ -2312,12 +2312,12 @@ DistanceJoint2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1013012136}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CollideConnected: 0
   m_ConnectedRigidBody: {fileID: 1606344279}
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: .100000009, y: .099999994}
-  m_Distance: .00499999989
+  m_Distance: .0500000007
   m_MaxDistanceOnly: 1
 --- !u!1 &1017635666
 GameObject:
@@ -3856,7 +3856,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1606344275}
-  m_Mass: .200000003
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 28.4500008
   m_GravityScale: 0

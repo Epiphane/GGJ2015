@@ -16,7 +16,7 @@ public class PlatformSwapSaboteurScript : MonoBehaviour {
 			return;
 		}
 
-		if (GlobalInput.players[4].ABtn()) {
+		if (GlobalInput.players[GameController.instance.GetSabateur()].ABtn()) {
 			GameObject[] objects = GameObject.FindGameObjectsWithTag("swapPlatform");
 			for (int i = 0; i < objects.Length; ++i) {
 				objects[i].GetComponent<PlatformSwapPlatformScript>().swap();

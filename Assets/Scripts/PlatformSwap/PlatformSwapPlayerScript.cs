@@ -9,11 +9,22 @@ public class PlatformSwapPlayerScript : MonoBehaviour {
 
 	private bool onGround;
 	CountdownScript countdownScript;
+	int playerIndex;
 
 	// Use this for initialization
 	void Start () {
 		onGround = true;
 		countdownScript = GameObject.Find("Countdown").GetComponent<CountdownScript>();
+
+		if (playerNum == 1) {
+			playerIndex = GameController.instance.GetPlayerOne();
+		}
+		if (playerNum == 2) {
+			playerIndex = GameController.instance.GetPlayerTwo();
+		}
+		if (playerNum == 3) {
+			playerIndex = GameController.instance.GetPlayerThree();
+		}
 	}
 	
 	// Update is called once per frame
@@ -22,10 +33,10 @@ public class PlatformSwapPlayerScript : MonoBehaviour {
 			return;
 		}
 
-		float horizAxis = GlobalInput.players[playerNum].XAxis();
+		float horizAxis = GlobalInput.players[playerIndex].XAxis();
 		rigidbody2D.velocity = new Vector2(horizAxis * MOVE_SPEED, rigidbody2D.velocity.y);
 
-		if (onGround && GlobalInput.players[playerNum].ABtn()) {
+		if (onGround && GlobalInput.players[playerIndex].ABtn()) {
 			onGround = false;
 			rigidbody2D.AddForce(Vector2.up * 450.0f);
 		}

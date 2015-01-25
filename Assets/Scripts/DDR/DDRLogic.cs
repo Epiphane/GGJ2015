@@ -21,7 +21,7 @@ namespace DDR {
 		public ArrayList[] notes = new ArrayList[] { new ArrayList(), new ArrayList(), new ArrayList(), new ArrayList() };
 		public int beatsPerNote = 6;
 		private float secPerBeat;
-		private float timeLeft = -0.2f;
+		public float timeLeft = -0.4f;
 
 		// UI stuff
 		public GameObject error;
@@ -37,7 +37,7 @@ namespace DDR {
 				levelController = levelControllerObj.GetComponent<LevelController>();
 			}
 
-			GameObject playerObj = GameObject.Find ("Player" + levelController.saboteur);
+			GameObject playerObj = GameObject.Find ("Player" + GameController.instance.GetSabateur());
 			Instantiate(instructions, new Vector3(-3, playerObj.transform.position.y + 0.6f, 1), playerObj.transform.rotation);
 		}
 		
@@ -46,7 +46,7 @@ namespace DDR {
 			// Create notes!
 			if (Time.time - timeLeft >= secPerBeat) {
 				for(int i = 0; i < 4; i ++) {
-					if(i + 1 == levelController.saboteur)
+					if(i + 1 == GameController.instance.GetSabateur())
 						continue;
 
 					if(Random.Range(0, 2) >= 1 && errors [i] <= max_errors) { 
@@ -58,7 +58,7 @@ namespace DDR {
 						newScript.timeLeft = beatsPerNote * secPerBeat;
 						newScript.player = i;
 						newScript.finish = finish[i];
-						notes[i].Add(newObj);
+						notes[i].Add(newScript);
 					}
 				}
 
@@ -74,12 +74,11 @@ namespace DDR {
 				return false;
 			} else {
 				// Find note that's close to being hittable
-				GameObject thisNote = (GameObject) (notes [player] [0]);
-				NoteScript noteScript = note.GetComponent<NoteScript>();
+				NoteScript noteScript = notes [player][0] as NoteScript;
 
-				if(noteScript.timeLeft <= 0.15f) {
+				if(noteScript.timeLeft <= 0.25f) {
 					notes [player].RemoveAt (0);
-					Destroy (thisNote);
+					Destroy (noteScript.gameObject);
 
 					// Play sound?
 					return true;
@@ -92,9 +91,9 @@ namespace DDR {
 		}
 
 		public void missNote(int player) {
-			GameObject note = (GameObject) (notes [player] [0]);
+			NoteScript note = notes [player] [0] as NoteScript;
 			notes [player].RemoveAt (0);
-			Destroy (note);
+			Destroy (note.gameObject);
 
 			addError (player);
 		}
@@ -106,9 +105,9 @@ namespace DDR {
 			if (err > max_errors) {
 				losers ++;
 				while(notes[player].Count > 0) {
-					GameObject note = (GameObject) (notes [player] [0]);
+					NoteScript note = notes [player] [0] as NoteScript;
 					notes [player].RemoveAt (0);
-					Destroy (note);
+					Destroy (note.gameObject);
 				}
 				
 				if(losers > 2)

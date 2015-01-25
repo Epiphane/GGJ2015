@@ -919,8 +919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f823b14985ee24282ad11dbb52a5c32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TOTAL_TIME: 5
-  errorsAllowed: 2
 --- !u!1 &1163945769
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,8 +1251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f823b14985ee24282ad11dbb52a5c32b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TOTAL_TIME: 15
-  errorsAllowed: 2
 --- !u!114 &1805034062
 MonoBehaviour:
   m_ObjectHideFlags: 0

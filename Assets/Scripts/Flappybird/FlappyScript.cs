@@ -16,9 +16,23 @@ public class FlappyScript : MonoBehaviour {
 		frozen = true;
 
 		countdownScript = GameObject.Find("Countdown").GetComponent<CountdownScript>();
+
+		if (playerNum == 1) {
+			playerIndex = GameController.instance.GetPlayerOne();
+		}
+		if (playerNum == 2) {
+			playerIndex = GameController.instance.GetPlayerTwo();
+		}
+		if (playerNum == 3) {
+			playerIndex = GameController.instance.GetPlayerThree();
+		}
+		if (playerNum == 4) {
+			playerIndex = GameController.instance.GetSabateur();
+		}
 	}
 
 	public int playerNum;
+	private int playerIndex;
 
 	// Update is called once per frame
 	void Update () {
@@ -33,14 +47,14 @@ public class FlappyScript : MonoBehaviour {
 			}
 		}
 
-		if (GlobalInput.players[playerNum].ABtn()) {
+		if (GlobalInput.players[playerIndex].ABtn()) {
 			Vector2 vel = rigidbody2D.velocity;
 			vel.y = 0;
 			rigidbody2D.velocity = vel;
 			rigidbody2D.AddForce(Vector2.up * 300.0f);
 		}
 
-		rigidbody2D.AddForce(Vector2.right * GlobalInput.players[playerNum].XAxis() * 5.0f);
+		rigidbody2D.AddForce(Vector2.right * GlobalInput.players[playerIndex].XAxis() * 5.0f);
 	}
 
 	public void OnHitPipe() {
