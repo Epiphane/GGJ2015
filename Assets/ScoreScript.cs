@@ -69,6 +69,40 @@ public class ScoreScript : MonoBehaviour {
 		
 	}
 
+	public void DoLevel(string nextLevel, float delay) {
+		Application.LoadLevel("Score");
+		ApplyScore();
+
+		if (p1score < 50 && p2score < 50 && p3score < 50 && p4score < 50) {
+			GameController.instance.LoadLevel(nextLevel, delay);
+		}
+		else {
+			GameController.instance.LoadLevel("Sluts", 3);
+		}
+	}
+
+	public ArrayList WhoWon() {
+		ArrayList result = new ArrayList();
+
+		if (p1score >= 50) {
+			result.Add(1);
+		}
+		
+		if (p2score >= 50) {
+			result.Add(2);
+		}
+		
+		if (p3score >= 50) {
+			result.Add(3);
+		}
+		
+		if (p4score >= 50) {
+			result.Add(4);
+		}
+
+		return result;
+	}
+
 	private float coolTime = 0;
 	// Update is called once per frame
 	void Update () {
