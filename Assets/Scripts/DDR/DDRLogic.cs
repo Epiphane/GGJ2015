@@ -21,13 +21,12 @@ namespace DDR {
 		public ArrayList[] notes = new ArrayList[] { new ArrayList(), new ArrayList(), new ArrayList(), new ArrayList() };
 		public int beatsPerNote = 6;
 		private float secPerBeat;
-		private float timeLeft = 0f;
+		private float timeLeft = -0.2f;
 
 		// UI stuff
 		public GameObject error;
 		public GameObject instructions;
 		public bool linear = true;
-		private bool[] press = new bool[] { false, false, false, false };
 
 		// Use this for initialization
 		void Start () {
@@ -38,23 +37,12 @@ namespace DDR {
 				levelController = levelControllerObj.GetComponent<LevelController>();
 			}
 
-			GameObject.Destroy (GameObject.Find ("p" + levelController.saboteur + "_Source"));
-
 			GameObject playerObj = GameObject.Find ("Player" + levelController.saboteur);
 			Instantiate(instructions, new Vector3(-3, playerObj.transform.position.y + 0.6f, 1), playerObj.transform.rotation);
 		}
 		
 		// Update is called once per frame
 		void Update () {
-			if (Input.GetAxis ("p" + levelController.saboteur + "_Fire_keyboard") != 0) {
-				if(!press[levelController.saboteur - 1]) {
-					linear = !linear;
-					press[levelController.saboteur - 1] = true;
-				}
-			}
-			else
-				press[levelController.saboteur - 1] = false;
-
 			// Create notes!
 			if (Time.time - timeLeft >= secPerBeat) {
 				for(int i = 0; i < 4; i ++) {
@@ -78,22 +66,51 @@ namespace DDR {
 			}
 		}
 
+		public bool strum(int player) {
+			player --;
+
+			if (notes [player].Count == 0) {
+				addError (player);
+				return false;
+			} else {
+				// Find note that's close to being hittable
+				GameObject thisNote = (GameObject) (notes [player] [0]);
+				NoteScript noteScript = note.GetComponent<NoteScript>();
+
+				if(noteScript.timeLeft <= 0.15f) {
+					notes [player].RemoveAt (0);
+					Destroy (thisNote);
+
+					// Play sound?
+					return true;
+				}
+				else {
+					addError (player);
+					return false;
+				}
+			}
+		}
+
 		public void missNote(int player) {
 			GameObject note = (GameObject) (notes [player] [0]);
 			notes [player].RemoveAt (0);
 			Destroy (note);
 
+			addError (player);
+		}
+
+		public void addError(int player) {
 			errors [player]++;
 			int err = errors [player];
 
 			if (err > max_errors) {
 				losers ++;
 				while(notes[player].Count > 0) {
-					note = (GameObject) (notes [player] [0]);
+					GameObject note = (GameObject) (notes [player] [0]);
 					notes [player].RemoveAt (0);
 					Destroy (note);
 				}
-
+				
 				if(losers > 2)
 					levelController.OnLose (3.0f);
 			} else {
