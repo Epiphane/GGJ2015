@@ -37,7 +37,16 @@ public class LevelController : MonoBehaviour {
 		EndAnim();
 		ShowText("Good Job!", new Color(0.1f, 0.9f, 0.5f));
 
-		GameController.instance.LoadLevel(nextLevel, delay);
+		for (int i = 1; i < 5; i++) {
+			if (i == saboteur) {
+				continue;
+			}
+
+			ScoreScript.instance.AddScore(i, 10);
+		}
+
+		Application.LoadLevel ("Score");
+		GameController.instance.LoadLevel(nextLevel, delay + 5);
 	}
 
 	public void OnLose(float delay) {
