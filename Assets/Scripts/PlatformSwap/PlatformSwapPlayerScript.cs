@@ -5,7 +5,7 @@ public class PlatformSwapPlayerScript : MonoBehaviour {
 
 	const float MOVE_SPEED = 5.0f;
 
-	public string player;
+	public int playerNum;
 
 	private bool onGround;
 
@@ -16,17 +16,17 @@ public class PlatformSwapPlayerScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		float horizAxis = Input.GetAxis(player + "_Horizontal_keyboard");
+		float horizAxis = GlobalInput.players[playerNum].XAxis();
 		rigidbody2D.velocity = new Vector2(horizAxis * MOVE_SPEED, rigidbody2D.velocity.y);
 
-		if (onGround && Input.GetKey(KeyCode.Space)) {
+		if (onGround && GlobalInput.players[playerNum].ABtn()) {
 			onGround = false;
 			rigidbody2D.AddForce(Vector2.up * 450.0f);
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.tag.Equals("floor") && other.transform.position.y < transform.position.y) {
+		if ((other.gameObject.tag.Equals("floor") || other.gameObject.tag.Equals("swapPlatform")) && other.transform.position.y < transform.position.y) {
 			onGround = true;
 		}
 	}
