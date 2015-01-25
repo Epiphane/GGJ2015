@@ -30,6 +30,11 @@ public class FlappyScript : MonoBehaviour {
 
 	public void OnHitPipe() {
 		alive = false;
+
+		GameObject leftInvis = GameObject.Find("Left Invisible Wall");
+		GameObject rightInvis = GameObject.Find("Right Invisible Wall");
+		Physics2D.IgnoreCollision(collider2D, leftInvis.collider2D);
+		Physics2D.IgnoreCollision(collider2D, rightInvis.collider2D);
 	}
 
 	public bool IsAlive() {
