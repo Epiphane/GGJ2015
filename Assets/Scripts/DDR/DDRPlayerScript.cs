@@ -12,6 +12,8 @@ namespace DDR {
 
 		// Use this for initialization
 		void Start () {
+			GlobalInput.MehKeyboard ();
+
 			GameObject levelControllerObj = GameObject.Find("LevelController");
 			if (levelControllerObj != null) {
 				levelController = levelControllerObj.GetComponent<LevelController>();
