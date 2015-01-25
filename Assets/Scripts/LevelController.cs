@@ -11,7 +11,7 @@ public class LevelController : MonoBehaviour {
 	}
 
 	private State state = State.NONE;
-	public int saboteur = 2;
+	public int saboteur = 2; //Random.Range(1,5);
 
 	public string nextLevel;
 
