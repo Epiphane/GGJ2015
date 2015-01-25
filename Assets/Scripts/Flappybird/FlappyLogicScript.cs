@@ -3,11 +3,15 @@ using System.Collections;
 
 public class FlappyLogicScript : MonoBehaviour {
 
+	private const float PIPE_Y_RANGE = 3.0f;
+
 	public float numSeconds;
+	public float interval;
 
 	private FlappyScript bird1Script, bird2Script, bird3Script;
 	private int score;
 	private bool reported;
+	private float lastCreate;
 
 	// Use this for initialization
 	void Start () {
@@ -17,10 +21,21 @@ public class FlappyLogicScript : MonoBehaviour {
 
 		score = 0;
 		reported = false;
+		lastCreate = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (Time.time - lastCreate >= interval) {
+			lastCreate = Time.time;
+
+			GameObject pipe = Instantiate(Resources.Load("Flappybird/Pipe")) as GameObject;
+			Vector3 pos = pipe.transform.position;
+			pos.x = 15.0f;
+			pos.y = Random.Range(-PIPE_Y_RANGE, PIPE_Y_RANGE);
+			pipe.transform.position = pos;
+		}
+
 		if (!reported && !bird1Script.IsAlive() && !bird2Script.IsAlive() && !bird3Script.IsAlive()) {
 			reported = true;
 
