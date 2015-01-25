@@ -57,7 +57,7 @@ public class LevelController : MonoBehaviour {
 		state = State.WIN;
 
 		EndAnim();
-		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
+		ShowText("Sabotaged!", new Color(0.8f, 0.1f, 0.2f));
 		
 		ScoreScript.instance.AddScore(GameController.instance.GetSabateur(), 15);
 		GameController.instance.LoadLevel(nextLevel, delay);
