@@ -6,6 +6,12 @@ public class GlobalInput : MonoBehaviour {
 
 	public GameObject anim1, anim2, anim3, anim4;
 
+	public static Player[] players {
+		get {
+			return new Player[] {null, P1, P2, P3, P4};
+		}
+	}
+
 	void Update() {
 		if (Input.GetKeyDown("joystick 1 button 0")) {
 			anim1.GetComponent<Animator>().SetTrigger("P1Entered");
@@ -40,29 +46,28 @@ public class Player {
 
 	public string num;
 
-	float XAxis() {
+	public float XAxis() {
 		return Input.GetAxis("Horizontal" + num);
 	}
 	
-	float YAxis() {
+	public float YAxis() {
 		return Input.GetAxis("Vertical" + num);
 	}
 
-	bool ABtn() {
+	public bool ABtn() {
 		return Input.GetKey ("joystick " + num + " button 0");
 	}
 
 	
-	bool BBtn() {
+	public bool BBtn() {
 		return Input.GetKey ("joystick " + num + " button 1");
 	}
 	
-	bool YBtn() {
+	public bool YBtn() {
 		return Input.GetKey ("joystick " + num + " button 2");
 	}
 
-	bool XBtn() {
+	public bool XBtn() {
 		return Input.GetKey ("joystick " + num + " button 3");
-
 	}
 }
