@@ -39,7 +39,7 @@ public class LevelController : MonoBehaviour {
 
 
 		for (int i = 1; i < 5; i++) {
-			if (i == saboteur) {
+			if (i == GameController.instance.GetSabateur()) {
 				continue;
 			}
 
@@ -59,8 +59,8 @@ public class LevelController : MonoBehaviour {
 		EndAnim();
 		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
 		
+		ScoreScript.instance.AddScore(GameController.instance.GetSabateur(), 15);
 		GameController.instance.LoadLevel(nextLevel, delay);
-		//ScoreScript.instance.AddScore(saboteur, 15);
 		//ScoreScript.instance.DoLevel(nextLevel, delay);
 	}	
 

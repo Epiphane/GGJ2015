@@ -130,7 +130,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 53958075}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalRotation: {x: 0, y: 0, z: .707106888, w: .707106769}
   m_LocalPosition: {x: 12.0900002, y: -.0599999987, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
@@ -658,7 +658,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 376484419}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
+  m_LocalRotation: {x: 0, y: 0, z: .707106888, w: .707106769}
   m_LocalPosition: {x: -12.1700001, y: -.0599999987, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
@@ -691,8 +691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec7c4933aa994e53af7f33a21e8221a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saboteur: 2
-  nextLevel: Slots
+  nextLevel: Sluts
 --- !u!4 &471584960
 Transform:
   m_ObjectHideFlags: 0
