@@ -12,31 +12,40 @@ public class GlobalInput : MonoBehaviour {
 		}
 	}
 
+	private int playersAccepted = 0;
+
 	void Update() {
 		if (Input.GetKeyDown("joystick 1 button 0")) {
 			anim1.GetComponent<Animator>().SetTrigger("P1Entered");
 			P1 = new Player();
 			P1.num = "1";
+			playersAccepted++;
 		}
 
 		if (Input.GetKeyDown("joystick 2 button 0")) {
 			anim2.GetComponent<Animator>().SetTrigger("P2Entered");
 			P2 = new Player();
 			P2.num = "2";
+			playersAccepted++;
 		}
 
 		if (Input.GetKeyDown("joystick 3 button 0")) {
 			anim3.GetComponent<Animator>().SetTrigger("P3Entered");
 			P3 = new Player();
 			P3.num = "3";
+			playersAccepted++;
 		}
 
 		if (Input.GetKeyDown("joystick 4 button 0")) {
 			anim4.GetComponent<Animator>().SetTrigger("P4Entered");
 			P4 = new Player();
 			P4.num = "4";
+			playersAccepted++;
 		}
-		
+
+		if (playersAccepted == 4) {
+			Application.LoadLevel ("BoxGame");
+		}
 	}
 }
 

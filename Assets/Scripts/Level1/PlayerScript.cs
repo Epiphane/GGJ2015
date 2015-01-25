@@ -15,8 +15,8 @@ public class PlayerScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float moveHorizontal = GlobalInput.players[player].XAxis();
-		float moveVertical =   GlobalInput.players[player].YAxis();
+		float moveHorizontal =  GlobalInput.players[player].XAxis();
+		float moveVertical =   -GlobalInput.players[player].YAxis();
 		Vector3 translate = new Vector3(moveHorizontal, moveVertical, 0.0f) * Time.deltaTime * MOVE_SPEED;
 		transform.Translate(translate);
 	}
