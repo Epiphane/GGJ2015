@@ -105,10 +105,10 @@ public class KeyboardPlayer: Player {
 		this.d = d;
 	}
 
-	public float XAxis() { return Input.GetAxis("KHor" + num); }
-	public float YAxis() { return Input.GetAxis("KVer" + num); }
+	public override float XAxis() { return Input.GetAxis("KHor" + num); }
+	public override float YAxis() { return Input.GetAxis("KVer" + num); }
 
-	public override bool ABtn() { base.ABtn (); return Input.GetKey (a); }
+	public override bool ABtn() { return Input.GetKeyDown (a); }
 	public override bool BBtn() { return Input.GetKeyDown (b); }
 	public override bool YBtn() { return Input.GetKeyDown (c); }
 	public override bool XBtn() { return Input.GetKeyDown (d); }
