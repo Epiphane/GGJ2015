@@ -15,3 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/BoxGame.unity
   - enabled: 1
     path: Assets/Scenes/Flappybird.unity
+  - enabled: 1
+    path: Assets/Scenes/DDR.unity
+  - enabled: 1
+    path: Assets/Scenes/Excitebike.unity
+  - enabled: 1
+    path: Assets/Scenes/Freefall.unity
+  - enabled: 1
+    path: Assets/Scenes/InputPicker.unity
+  - enabled: 1
+    path: Assets/Scenes/Sluts.unity
