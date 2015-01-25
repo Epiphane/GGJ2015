@@ -58,7 +58,7 @@ public class GlobalInput : MonoBehaviour {
 			playersAccepted++;
 		}
 
-		if (playersAccepted == 4) {
+		if (P1 != null && P2 != null && P3 != null && P4 != null) {
 			Application.LoadLevel (nextScene);
 		}
 	}

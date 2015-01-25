@@ -25,7 +25,7 @@ public class FlappyScript : MonoBehaviour {
 			rigidbody2D.AddForce(Vector2.up * 300.0f);
 		}
 
-		rigidbody2D.AddForce(Vector2.right * GlobalInput.players[playerNum].XAxis() * 10.0f);
+		rigidbody2D.AddForce(Vector2.right * GlobalInput.players[playerNum].XAxis() * 5.0f);
 	}
 
 	public void OnHitPipe() {
