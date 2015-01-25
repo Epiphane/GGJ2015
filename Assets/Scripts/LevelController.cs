@@ -60,6 +60,7 @@ public class LevelController : MonoBehaviour {
 		ShowText("You Suck!", new Color(0.8f, 0.1f, 0.2f));
 		
 		ScoreScript.instance.AddScore(GameController.instance.GetSabateur(), 15);
+		ScoreScript.instance.ApplyScore();
 		GameController.instance.LoadLevel(nextLevel, delay);
 		//ScoreScript.instance.DoLevel(nextLevel, delay);
 	}	

@@ -69,7 +69,7 @@ public class ScoreScript : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	public void DoLevel(string nextLevel, float delay) {
