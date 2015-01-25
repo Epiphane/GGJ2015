@@ -8,14 +8,20 @@ public class PlatformSwapPlayerScript : MonoBehaviour {
 	public int playerNum;
 
 	private bool onGround;
+	CountdownScript countdownScript;
 
 	// Use this for initialization
 	void Start () {
 		onGround = true;
+		countdownScript = GameObject.Find("Countdown").GetComponent<CountdownScript>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (!countdownScript.Done()) {
+			return;
+		}
+
 		float horizAxis = GlobalInput.players[playerNum].XAxis();
 		rigidbody2D.velocity = new Vector2(horizAxis * MOVE_SPEED, rigidbody2D.velocity.y);
 

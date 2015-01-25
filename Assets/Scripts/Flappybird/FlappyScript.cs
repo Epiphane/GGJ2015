@@ -7,19 +7,30 @@ public class FlappyScript : MonoBehaviour {
 	bool frozen;
 	public float gravityScale;
 
+	CountdownScript countdownScript;
+
 	// Use this for initialization
 	void Start () {
 		alive = true;
 		rigidbody2D.gravityScale = 0;
 		frozen = true;
+
+		countdownScript = GameObject.Find("Countdown").GetComponent<CountdownScript>();
 	}
 
 	public int playerNum;
 
 	// Update is called once per frame
 	void Update () {
-		if (!alive || frozen) {
+		if (!alive) {
 			return;
+		}
+
+		if (frozen) {
+			if (countdownScript.Done ()) {
+				frozen = false;
+				rigidbody2D.gravityScale = gravityScale;
+			}
 		}
 
 		if (GlobalInput.players[playerNum].ABtn()) {
@@ -45,10 +56,5 @@ public class FlappyScript : MonoBehaviour {
 
 	public bool IsAlive() {
 		return alive;
-	}
-
-	public void Unfreeze() {
-		frozen = false;
-		rigidbody2D.gravityScale = gravityScale;
 	}
 }

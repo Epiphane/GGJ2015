@@ -1041,7 +1041,7 @@ MonoBehaviour:
   anim2: {fileID: 819044013}
   anim3: {fileID: 648846927}
   anim4: {fileID: 1061136954}
-  nextScene: Slots
+  nextScene: Flappybird
 --- !u!1 &1449221997
 GameObject:
   m_ObjectHideFlags: 0

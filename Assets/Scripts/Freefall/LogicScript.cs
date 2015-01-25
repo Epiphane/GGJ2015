@@ -5,18 +5,33 @@ public class LogicScript : MonoBehaviour {
 
 	private const float WIND_STRENGTH = 1.0f;
 	private const float PLAYER_STRENGTH = 1.2f;
+	private const float GRAVITY_SCALE = 0.05f;
 
 	private GameObject player1, player2, player3;
+	CountdownScript countdownScript;
+	bool started;
 
 	// Use this for initialization
 	void Start () {
 		player1 = GameObject.Find("Player1");
 		player2 = GameObject.Find("Player2");
 		player3 = GameObject.Find("Player3");
+		player1.rigidbody2D.gravityScale = player2.rigidbody2D.gravityScale = player3.rigidbody2D.gravityScale = 0;
+		countdownScript = GameObject.Find("Countdown").GetComponent<CountdownScript>();
+		started = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (!started && countdownScript.Done ()) {
+			started = true;
+			player1.rigidbody2D.gravityScale = player2.rigidbody2D.gravityScale = player3.rigidbody2D.gravityScale = GRAVITY_SCALE;
+		}
+
+		if (!started) {
+			return;
+		}
+	
 		float sabateurX = Input.GetAxis("p1_Horizontal_keyboard") * WIND_STRENGTH;
 		Vector2 wind = new Vector2(sabateurX, 0.0f);
 
