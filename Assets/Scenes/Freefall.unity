@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .0509803928}
   m_Sprite: {fileID: 21300000, guid: f9b33362ac8a64a8e98b262c73661d29, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -233,6 +233,10 @@ Prefab:
     - target: {fileID: 22412828, guid: 30500a061931641d68291f9641f2e3a9, type: 2}
       propertyPath: m_Pivot.y
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11412828, guid: 30500a061931641d68291f9641f2e3a9, type: 2}
+      propertyPath: m_Color.a
+      value: .0509803928
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30500a061931641d68291f9641f2e3a9, type: 2}
@@ -556,6 +560,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11442018, guid: 4cf6e42c856fb4ad691773d25b6283bb, type: 2}
+      propertyPath: m_Color.a
+      value: .0509803928
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4cf6e42c856fb4ad691773d25b6283bb, type: 2}
   m_RootGameObject: {fileID: 552446538}
@@ -626,7 +634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .0509803928}
   m_Sprite: {fileID: 21300002, guid: f9b33362ac8a64a8e98b262c73661d29, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -822,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .0509803928}
   m_Sprite: {fileID: 21300002, guid: f9b33362ac8a64a8e98b262c73661d29, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
@@ -916,6 +924,10 @@ Prefab:
     - target: {fileID: 22494690, guid: 8546fef444be04115816184544732dc1, type: 2}
       propertyPath: m_Pivot.y
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11494690, guid: 8546fef444be04115816184544732dc1, type: 2}
+      propertyPath: m_Color.a
+      value: .0509803928
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8546fef444be04115816184544732dc1, type: 2}
@@ -1369,6 +1381,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: .5
       objectReference: {fileID: 0}
+    - target: {fileID: 11485552, guid: 250a75d3189e5496486cc823b1077c01, type: 2}
+      propertyPath: m_Color.a
+      value: .0509803928
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 250a75d3189e5496486cc823b1077c01, type: 2}
   m_RootGameObject: {fileID: 2078468486}
@@ -1439,7 +1455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: .0509803928}
   m_Sprite: {fileID: 21300000, guid: f9b33362ac8a64a8e98b262c73661d29, type: 3}
   m_Type: 0
   m_PreserveAspect: 1

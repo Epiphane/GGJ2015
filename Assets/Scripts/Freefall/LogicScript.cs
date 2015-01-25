@@ -32,16 +32,16 @@ public class LogicScript : MonoBehaviour {
 			return;
 		}
 	
-		float sabateurX = Input.GetAxis("p1_Horizontal_keyboard") * WIND_STRENGTH;
+		float sabateurX = GlobalInput.P1.XAxis() * WIND_STRENGTH;
 		Vector2 wind = new Vector2(sabateurX, 0.0f);
 
-		float player1X = Input.GetAxis("p2_Horizontal_keyboard") * PLAYER_STRENGTH;
+		float player1X = GlobalInput.P2.XAxis() * PLAYER_STRENGTH;
 		Vector2 player1Force = new Vector2(player1X, 0.0f);
 
-		float player2X = Input.GetAxis("p3_Horizontal_keyboard") * PLAYER_STRENGTH;
+		float player2X = GlobalInput.P3.XAxis() * PLAYER_STRENGTH;
 		Vector2 player2Force = new Vector2(player2X, 0.0f);
 
-		float player3X = Input.GetAxis("p4_Horizontal_keyboard") * PLAYER_STRENGTH;
+		float player3X = GlobalInput.P4.XAxis() * PLAYER_STRENGTH;
 		Vector2 player3Force = new Vector2(player3X, 0.0f);
 
 		player1.rigidbody2D.AddForce(wind + player1Force);
