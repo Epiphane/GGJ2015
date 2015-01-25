@@ -11,6 +11,7 @@ public class FlappyLogicScript : MonoBehaviour {
 	private FlappyScript bird1Script, bird2Script, bird3Script;
 	private int score;
 	private bool reported;
+	private float initTime;
 	private float lastCreate;
 
 	// Use this for initialization
@@ -22,10 +23,20 @@ public class FlappyLogicScript : MonoBehaviour {
 		score = 0;
 		reported = false;
 		lastCreate = Time.time;
+		initTime = Time.time;
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (!reported && Time.time - initTime >= numSeconds) {
+			reported = true;
+
+			GameObject levelControllerObj = GameObject.Find("LevelController");
+			if (levelControllerObj != null) {
+				levelControllerObj.GetComponent<LevelController>().OnWin(3.0f);
+			}
+		}
+
 		if (Time.time - lastCreate >= interval) {
 			lastCreate = Time.time;
 
