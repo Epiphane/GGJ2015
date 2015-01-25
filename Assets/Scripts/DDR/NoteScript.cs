@@ -54,5 +54,9 @@ namespace DDR {
 			
 			timeLeft -= Time.deltaTime;
 		}
+
+		public float getTimeLeft() {
+			return timeLeft;
+		}
 	}
 }

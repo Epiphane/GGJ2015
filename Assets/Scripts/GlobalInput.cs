@@ -60,6 +60,9 @@ public class GlobalInput : MonoBehaviour {
 	}
 
 	public static void Meh() {
+		if (P1 != null)
+			return;
+
 		P1 = new Player("1");
 		P2 = new Player("2");
 		P3 = new Player("3");
@@ -67,6 +70,9 @@ public class GlobalInput : MonoBehaviour {
 	}
 	
 	public static void MehKeyboard() {
+		if (P1 != null)
+			return;
+
 		P1 = new KeyboardPlayer(KeyCode.Q, KeyCode.Z, KeyCode.Alpha1, KeyCode.Alpha3);
 		P2 = new KeyboardPlayer(KeyCode.U, KeyCode.O, KeyCode.Alpha7, KeyCode.Alpha9);
 		P3 = new KeyboardPlayer(KeyCode.RightShift, KeyCode.Return, KeyCode.Keypad1, KeyCode.Backslash);

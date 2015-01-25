@@ -8,6 +8,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		GlobalInput.MehKeyboard ();
 		//GamePad.SetVibration(0, 1, 1);
 	}
 

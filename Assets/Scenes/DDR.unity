@@ -478,9 +478,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 694500079}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
+  m_Script: {fileID: 11500000, guid: aed9225d686724e02a42774b3e40537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 4
+  soundEffect: {fileID: 694500083}
 --- !u!82 &694500083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -489,7 +491,7 @@ AudioSource:
   m_GameObject: {fileID: 694500079}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 15abe0b76a27841c0b30d4946905a1b5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 2a623e473fcca41d4a16cfe604ecede6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -943,9 +945,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1066441577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
+  m_Script: {fileID: 11500000, guid: aed9225d686724e02a42774b3e40537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 3
+  soundEffect: {fileID: 1066441581}
 --- !u!82 &1066441581
 AudioSource:
   m_ObjectHideFlags: 0
@@ -954,7 +958,7 @@ AudioSource:
   m_GameObject: {fileID: 1066441577}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 7562d460740e2465db1052e32aa9f804, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d7fbe6ead3eee45faaf86b84b6f590e3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1212,7 +1216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a8a3601f1b34348af563035f6fd30f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BPM: 120
+  BPM: 122
   max_errors: 2
   space_between_errors: 1.5
   finish:
@@ -1223,6 +1227,7 @@ MonoBehaviour:
   startX: 9
   note: {fileID: 123178, guid: 87253d33cd4494a61944ab3425bb8449, type: 2}
   beatsPerNote: 6
+  timeLeft: -0
   error: {fileID: 180126, guid: fbfb3dbb3461e444fa6da28b1dc17dbc, type: 2}
   instructions: {fileID: 100468, guid: 09dca972246e745a484196e72e58cc76, type: 2}
   linear: 1
@@ -1546,7 +1551,7 @@ AudioSource:
   m_GameObject: {fileID: 1855667434}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: d5a0753bb8a6f4771a9d984fb98daef3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 170f2eed0b02b4d288e8d151978ec446, type: 3}
   m_PlayOnAwake: 1
   m_Volume: .600000024
   m_Pitch: 1
@@ -1668,9 +1673,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1919720227}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
+  m_Script: {fileID: 11500000, guid: aed9225d686724e02a42774b3e40537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 1
+  soundEffect: {fileID: 1919720231}
 --- !u!82 &1919720231
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1679,7 +1686,7 @@ AudioSource:
   m_GameObject: {fileID: 1919720227}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 8f97d9bc7c2ba4d66b438f7384a05b8e, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bb86f3d92147f46729adddb4e9939278, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1914,9 +1921,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2138977839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bc3790e0dfc47fda3a21c86a620adf, type: 3}
+  m_Script: {fileID: 11500000, guid: aed9225d686724e02a42774b3e40537c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: 2
+  soundEffect: {fileID: 2138977843}
 --- !u!82 &2138977843
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1925,7 +1934,7 @@ AudioSource:
   m_GameObject: {fileID: 2138977839}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: 37d1bb4f3f4cf47849f70d4d8571bf42, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 927a8e40c1c2541cc88d81b530ef97b1, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
