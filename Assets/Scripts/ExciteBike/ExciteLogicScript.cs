@@ -3,39 +3,48 @@ using System.Collections;
 
 public class ExciteLogicScript : MonoBehaviour {
 
-//	public float time_bwe
+	public float lastCreate;
+	public float interval = 1.5f;
+
+	public GameObject[] hazards;
+	public Transform[] sources;
+	
+	LevelController levelController;
+
+	public int alive = 3;
 
 	// Use this for initialization
 	void Start () {
 		GlobalInput.MehKeyboard ();
-//		bird1Script = GameObject.Find("Flappybird1").GetComponent<FlappyScript>();
-//		bird2Script = GameObject.Find("Flappybird2").GetComponent<FlappyScript>();
-//		bird3Script = GameObject.Find("Flappybird3").GetComponent<FlappyScript>();
-//
-//		score = 0;
-//		reported = false;
-//		lastCreate = Time.time;
+		
+		GameObject levelControllerObj = GameObject.Find("LevelController");
+		if (levelControllerObj != null) {
+			levelController = levelControllerObj.GetComponent<LevelController>();
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		if (Time.time - lastCreate >= interval) {
-//			lastCreate = Time.time;
+		if (Time.time - lastCreate >= interval) {
+			GameObject hazard = Instantiate(hazards[Random.Range(0, hazards.Length)]) as GameObject;
+
+			hazard.transform.position = sources[Random.Range(0, sources.Length)].position;
+
+			lastCreate = Time.time;
 //
 //			GameObject pipe = Instantiate(Resources.Load("Flappybird/Pipe")) as GameObject;
 //			Vector3 pos = pipe.transform.position;
 //			pos.x = 15.0f;
 //			pos.y = Random.Range(-PIPE_Y_RANGE, PIPE_Y_RANGE);
 //			pipe.transform.position = pos;
-//		}
-//
-//		if (!reported && !bird1Script.IsAlive() && !bird2Script.IsAlive() && !bird3Script.IsAlive()) {
-//			reported = true;
-//
-//			GameObject levelControllerObj = GameObject.Find("LevelController");
-//			if (levelControllerObj != null) {
-//				levelControllerObj.GetComponent<LevelController>().OnLose(3.0f);
-//			}
-//		}
+		}
+	}
+
+	public void killPlayer(int player) {
+		alive --;
+
+		if (alive == 0) {
+			levelController.OnLose(3.0f);
+		}
 	}
 }
