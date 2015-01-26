@@ -75,7 +75,7 @@ namespace Slots {
 				count += isSpinning[i-1];
 
 				if (count == 4) {
-					if (score >= 2) {
+					if (score >= 3) {
 						//WIN
 						levelController.OnWin(3.0f);
 					}
