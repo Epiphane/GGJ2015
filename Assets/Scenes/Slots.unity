@@ -934,7 +934,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ec7c4933aa994e53af7f33a21e8221a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saboteur: 4
   nextLevel: Excitebike
 --- !u!4 &521507968
 Transform:
@@ -2641,7 +2640,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'LUCKY 77''s WIN BIG!!!
+  m_Text: 'LUCKY 777''s WIN BIG!!!
 
 '
 --- !u!222 &1774663563
