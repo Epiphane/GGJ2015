@@ -22,6 +22,10 @@ namespace ExciteBike {
 
 		// Use this for initialization
 		void Start () {
+
+			if (player == GameController.instance.GetSabateur ()) {
+				transform.localScale = transform.localScale * 1.5f;
+			}
 			
 			GameObject levelControllerObj = GameObject.Find("LevelController");
 			if (levelControllerObj != null) {
@@ -76,7 +80,7 @@ namespace ExciteBike {
 		}
 		
 		void OnCollisionEnter2D(Collision2D col) {
-			if (player == GameController.instance.GetSabateur())
+			if (player == GameController.instance.GetSabateur() || dead)
 				return;
 
 			if (col.gameObject.tag == "bad") {
