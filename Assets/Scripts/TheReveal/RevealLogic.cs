@@ -17,6 +17,8 @@ namespace TheReveal {
 		
 		// Use this for initialization
 		void Start () {
+			GlobalInput.MehKeyboard ();
+
 			votes = new int[] { 0, 1, 2, 3 };
 			moving = new bool[] { false, false, false, false };
 
