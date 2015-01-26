@@ -21,12 +21,17 @@ namespace Slots {
 
 			Destroy(GameObject.Find("Options_"+GameController.instance.GetSabateur()));
 			isSpinning[GameController.instance.GetSabateur() - 1] = 1;
-
-		// Initialize Blockers to invisible
-		for (int i = 1; i<5; i++) {
+		
+			bool startBlock = false; 
+			// Initialize Blockers to invisible
+			for (int i = 1; i<5; i++) {
 				GameObject b = GameObject.Find("Options_"+i).transform.Find("Blocker").gameObject;
-			if (b) {
+			if (b && startBlock) {
 				b.SetActive(false);
+			}
+			else {
+				startBlock = true;
+				b.SetActive(true);
 			}
 		}
 
