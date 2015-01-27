@@ -51,6 +51,7 @@ public class FlappyScript : MonoBehaviour {
 			return;
 		}
 
+		// Flap
 		if (GlobalInput.players[playerIndex].ABtn()) {
 			Vector2 vel = rigidbody2D.velocity;
 			vel.y = 0;
@@ -58,7 +59,15 @@ public class FlappyScript : MonoBehaviour {
 			rigidbody2D.AddForce(Vector2.up * 300.0f);
 		}
 
-		rigidbody2D.AddForce(Vector2.right * GlobalInput.players[playerIndex].XAxis() * 5.0f);
+		if (GlobalInput.players [playerIndex].YBtn ()) {
+			rigidbody2D.AddForce(Vector2.right * 10.0f * 5.0f);
+		}
+		else if (GlobalInput.players[playerIndex].BBtn()) {
+			rigidbody2D.AddForce(Vector2.right * -10.0f * 5.0f);
+		}
+
+		// Forward/Backward motion with XAxis
+		// rigidbody2D.AddForce(Vector2.right * GlobalInput.players[playerIndex].XAxis() * 5.0f);
 	}
 
 	public void OnHitPipe() {

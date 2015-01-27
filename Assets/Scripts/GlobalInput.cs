@@ -17,11 +17,12 @@ public class GlobalInput : MonoBehaviour {
 
 	void Update() {
 		if (Input.GetKey ("space")) {
+
 			// No controllers? no problem!
-			P1 = new KeyboardPlayer(KeyCode.Q, KeyCode.Z, KeyCode.Alpha1, KeyCode.Alpha3);
-			P2 = new KeyboardPlayer(KeyCode.U, KeyCode.O, KeyCode.Alpha7, KeyCode.Alpha9);
-			P3 = new KeyboardPlayer(KeyCode.RightShift, KeyCode.Return, KeyCode.Keypad1, KeyCode.Backslash);
-			P4 = new KeyboardPlayer(KeyCode.Keypad4, KeyCode.Keypad6, KeyCode.Keypad7, KeyCode.Keypad8);
+			P1 = new KeyboardPlayer(KeyCode.X, KeyCode.Q, KeyCode.W, KeyCode.Alpha3);
+			P2 = new KeyboardPlayer(KeyCode.Period, KeyCode.O, KeyCode.P, KeyCode.Alpha9);
+			P3 = new KeyboardPlayer(KeyCode.Z, KeyCode.A, KeyCode.S, KeyCode.Backslash);
+			P4 = new KeyboardPlayer(KeyCode.UpArrow, KeyCode.LeftArrow, KeyCode.RightArrow, KeyCode.Keypad8);
 
 			P1.num = "1";
 			P2.num = "2";
